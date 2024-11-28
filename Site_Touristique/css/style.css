@@ -1,0 +1,128 @@
+*,
+::before,
+::after {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+/*listes des couleurs a utiliser*/
+:root {
+  --bg-color: white;
+  --txt-color: rgb(34, 33, 33);
+  --btn-color: rgb(241, 194, 39);
+}
+.bebas-neue-regular {
+  font-family: "Bebas Neue", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+body {
+  width: 100%;
+  height: 100dvh;
+  background-color: var(--bg-color);
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  font-family: bebas Neue;
+}
+.logo span {
+  color: var(--txt-color);
+  font-size: 1.2em;
+  text-decoration: wavy;
+}
+header {
+  height: 10dvh;
+  width: 100%;
+  display: flex;
+  justify-content:space-evenly;
+  align-items: center;
+}
+.pg-links-accueil {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  list-style-type: none;
+  gap: 1em;
+  
+}
+.connexion-links {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  list-style-type: none;
+  gap: 1.5em;
+}
+li a {
+  text-decoration: none;
+  color: var(--txt-color);
+  font-size: 1.2em;
+  position: relative;
+/* Style du lien au survol avec l'animation */
+&::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px; /* Épaisseur de la ligne */
+  bottom: 0;
+  left: 0;
+  background-color: #000; /* Couleur de la ligne */
+  visibility: hidden;
+  transition: all 0.3s ease-in-out;
+}
+
+&:hover::after {
+  visibility: visible;
+  width: 100%;
+}
+
+}
+main {
+  height: 80dvh;
+  width: 100%;
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1em;
+}
+
+.contenu-sec-1 {
+  height: 54dvh;
+  width: 60%;
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  gap:0.8em;
+
+  h1 {
+    text-align: center;
+    font-size: 5em;
+}
+ 
+  .txt-p-sec-1 {
+    width: 62%;
+  }
+  p {
+    text-align: center;
+    font-size: 1.2em;
+  }
+}
+
+.btn-create-account{
+    background-color: var(--btn-color);
+    padding:12px;
+    border:none;
+    a{
+        text-decoration: none;
+        font-size: 1.2em;
+        color:var(--txt-color);
+        font-weight: 700;
+    }
+}
+footer {
+  /* background-color: antiquewhite; */
+  height: 10dvh;
+  width: 100%;
+}
